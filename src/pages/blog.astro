@@ -1,24 +1,18 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Mi blog de Astro aprendizaje";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
-    <h1>Este es mi blog!</h1>
-    <p>
-      Estoy trabajando en el tutorial introductorio de Astro. Esta es la tercera
-      página de mi sitio web, ¡y es la primera que he construido yo mismo!
-    </p>
-    <p>Aquí es donde publicaré sobre mi viaje de aprendizaje Astro.</p>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h1>Este es mi blog!</h1>
+  <p>
+    Estoy trabajando en el tutorial introductorio de Astro. Esta es la tercera
+    página de mi sitio web, ¡y es la primera que he construido yo mismo!
+  </p>
+  <p>Aquí es donde publicaré sobre mi viaje de aprendizaje Astro.</p>
+  <ul>
+    <li><a href="/posts/post-1/">Publicación 1</a></li>
+    <li><a href="/posts/post-2/">Publicación 2</a></li>
+    <li><a href="/posts/post-3/">Publicación 3</a></li>
+  </ul>
+</BaseLayout>
